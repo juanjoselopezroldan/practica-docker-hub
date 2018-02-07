@@ -7,7 +7,7 @@ echo "server { \
         server_name $SERVER_NAME; \
         }" > /etc/nginx/sites-available/default
 
-cp -r /tmp/html/* $DOCUMENTROOT
+cp -R /tmp/html/ $DOCUMENTROOT
 chown -R www-data:www-data $DOCUMENTROOT
 
 /usr/sbin/nginx -g "daemon off;"
